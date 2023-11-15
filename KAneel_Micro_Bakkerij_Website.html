@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KA!neel Micro-Bakkerij</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>KA!neel Micro-Bakkerij</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#over-ons">Over Ons</a></li>
+            <li><a href="#bestellen">Bestellen</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section id="over-ons">
+            <h2>Welkom bij KA!neel</h2>
+            <h3>Uw lokale micro-bakkerij voor heerlijke kaneelkoeken</h3>
+            <p>Ontdek de unieke smaak van onze handgemaakte kaneelkoeken, vers bereid met liefde en vakmanschap. Gelegen in het hart van Kessel-Lo, bieden we elke zaterdagochtend de perfecte traktatie om uw weekend te beginnen.</p>
+            <img src="https://source.unsplash.com/featured/?bakery" alt="Kaneelkoeken" style="width:100%; height:auto;">
+        </section>
+        <section id="bestellen">
+            <h2>Bestel Uw Kaneelkoeken</h2>
+            <h3>Vers en klaar voor afhaling</h3>
+            <p>Plaats hier uw bestelling voor onze overheerlijke kaneelkoeken. Bestellingen zijn mogelijk van maandag tot donderdag voor afhaling op de komende zaterdag.</p>
+            <form action="mailto:koen.vanderauwera@gmail.com" method="post" enctype="text/plain" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <input type="text" id="naam" name="naam" placeholder="Uw Naam" aria-label="Uw Naam" required style="grid-column: 1 / -1;">
+                <input type="tel" id="telefoon" name="telefoon" placeholder="Uw Telefoonnummer" aria-label="Uw Telefoonnummer" required style="grid-column: 1 / -1;">
+                <select id="aantal" name="aantal" aria-label="Aantal Kaneelkoeken" required style="grid-column: 1 / 2;">
+                    <option value="">Aantal Kaneelkoeken (max 10)</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <select id="afhaaluur" name="afhaaluur" aria-label="Afhaaluur" required style="grid-column: 2 / -1;">
+                    <option value="">Kies Afhaaluur</option>
+                    <option value="9u">9u</option>
+                    <option value="10u">10u</option>
+                    <option value="11u">11u</option>
+                </select>
+                <button type="submit" style="grid-column: 1 / -1;">Bestel Nu</button>
+            </form>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <h3>Vragen of speciale verzoeken?</h3>
+            <p>Voor alle vragen, speciale verzoeken of andere bestellingen, neem contact met ons op via <a href="mailto:koen.vanderauwera@gmail.com">email</a> of <a href="https://www.instagram.com/ka!neel_loves_cinnamon">Instagram</a>.</p>
+            <p>Afhaallocatie: <a href="https://www.google.com/maps?q=Ontvoogdingstraat+4,+3010+Kessel-Lo,+België" target="_blank">Ontvoogdingstraat 4, 3010 Kessel-Lo, België</a></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10078.583547702755!2d4.7258641!3d50.8819537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1610703a86a8f%3A0x1a3b8a99bf16f0f7!2sOntvoogdingstraat+4%2C+3010+Kessel-Lo%2C+België!5e0!3m2!1snl!2sbe!4v1668576468109" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 KA!neel Micro-Bakkerij</p>
+    </footer>
+</body>
+</html>
