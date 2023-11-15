@@ -90,6 +90,21 @@
     </script>
             </div>
         </form>
+
+     <script>
+        // Functie om het totale bedrag te berekenen op basis van het aantal geselecteerde kaneelkoeken
+        function berekenTotaal() {
+            const aantalSelectie = document.getElementById("aantal");
+            const totaalBedragTekst = document.getElementById("totaalBedrag");
+            const aantal = parseInt(aantalSelectie.value);
+            const totaal = aantal * 3; // 3 euro per kaneelkoek
+
+            totaalBedragTekst.textContent = `Totaal bedrag: ${totaal} euro`;
+        }
+
+        // Roep de functie aan wanneer de pagina wordt geladen om het initiële totaal te tonen
+
+    </script>
     </section>
 
     <!-- Contact Sectie -->
