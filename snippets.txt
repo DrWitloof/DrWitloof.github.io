@@ -9,3 +9,12 @@ opties uitschrijven :
         <script>
             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(num => document.write(`<option value="${num}">${num}</option>`));
         </script>
+
+
+        h2, h3 {
+            color: #D2691E; /* Kaneelkleur */
+        }
+
+        button:hover {
+            background-color: #A0522D;
+        }
