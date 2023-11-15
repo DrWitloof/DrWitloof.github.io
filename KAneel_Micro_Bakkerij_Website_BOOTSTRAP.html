@@ -55,29 +55,21 @@
             <div class="col-md-6">
                 <select id="aantal" name="aantal" class="form-select" aria-label="Aantal Kaneelkoeken" required>
                     <option value="">Aantal Kaneelkoeken (max 10)</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <option value="1">1</option>
-                    <!-- Voeg hier meer opties toe -->
+        <script>
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(option => document.write(`<option value="${option}">${option}</option>`));
+        </script>
+
                 </select>
             </div>
             <div class="col-md-6">
                 <select id="afhaaluur" name="afhaaluur" class="form-select" aria-label="Afhaaluur" required>
                     <option value="">Kies Afhaaluur</option>
-                    <option value="9u">9u</option>
-                    <option value="10u">10u</option>
-                    <option value="11u">11u</option>
+        <script>
+            ["9u","10u","11u"].forEach(option => document.write(`<option value="${option}">${option}</option>`));
+        </script>
                 </select>
             </div>
-            <div class="col-12">
+            <div class="col-1">
                 <button type="submit" class="btn btn-primary">Bestel Nu</button>
             </div>
         </form>
