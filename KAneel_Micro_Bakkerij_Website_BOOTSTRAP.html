@@ -84,7 +84,10 @@
                 </select>
             </div>
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary form-control">Bestel Nu</button>
+    <script>
+        if ([1, 2, 3, 4].includes((new Date()).getDay())) document.write('<button type="submit" class="btn btn-primary form-control">Bestel Nu</button>');
+        else document.write('<button type="submit" class="btn btn-primary form-control" disabled>Alleen van maandag tot donderdag</button>');
+    </script>
             </div>
         </form>
     </section>
