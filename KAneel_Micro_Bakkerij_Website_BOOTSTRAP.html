@@ -68,43 +68,39 @@
             </div>
             <div class="col-md-6">
                 <select id="aantal" name="aantal" class="form-control" aria-label="Aantal Kaneelkoeken" required>
-                    <option value="">Aantal Kaneelkoeken (max 10)</option>
-        <script>
-            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(option => document.write(`<option value="${option}">${option}</option>`));
-        </script>
-
+                    <option value="0">Aantal Kaneelkoeken</option>
+                    <script> // Show the options 1 => 10
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(option => document.write(`<option value="${option}">${option}</option>`));
+                    </script>
                 </select>
             </div>
             <div class="col-md-6">
                 <select id="afhaaluur" name="afhaaluur" class="form-control" aria-label="Afhaaluur" required>
                     <option value="">Kies Afhaaluur</option>
-        <script>
-            ["9u","10u","11u"].forEach(option => document.write(`<option value="${option}">${option}</option>`));
-        </script>
+                    <script> // Show the options 9 => 11
+                        ["9u","10u","11u"].forEach(option => document.write(`<option value="${option}">${option}</option>`));
+                    </script>
                 </select>
             </div>
             <div class="col-md-12">
-    <script>
-        if ([1, 2, 3, 4].includes((new Date()).getDay())) document.write('<button type="submit" class="btn btn-primary form-control">Bestel Nu</button>');
-        else document.write('<button type="submit" class="btn btn-primary form-control" disabled>Alleen van maandag tot donderdag</button>');
-    </script>
+            <script> // only allow orders on monday/tuesday/wednesday/thursday
+                if ([1, 2, 3, 4].includes((new Date()).getDay())) document.write('<button type="submit" class="btn btn-primary form-control">Bestel Nu</button>');
+                else document.write('<button type="submit" class="btn btn-primary form-control" disabled>Alleen van maandag tot donderdag</button>');
+            </script>
             </div>
         </form>
 
-     <script>
+    <p id="totaalBedrag">Totaal bedrag: -</p>
+
+    <script>
         // Functie om het totale bedrag te berekenen op basis van het aantal geselecteerde kaneelkoeken
         function berekenTotaal() {
-            const aantalSelectie = document.getElementById("aantal");
-            const totaalBedragTekst = document.getElementById("totaalBedrag");
-            const aantal = parseInt(aantalSelectie.value);
-            const totaal = aantal * 3; // 3 euro per kaneelkoek
-
-            totaalBedragTekst.textContent = `Totaal bedrag: ${totaal} euro`;
+            const aantal = parseInt(document.getElementById("aantal").value);
+            document.getElementById("totaalBedrag").textContent = `Totaal bedrag: ${aantal*3} euro`;
         }
-
-        // Roep de functie aan wanneer de pagina wordt geladen om het initiële totaal te tonen
-
+        berekenTotaal();
     </script>
+
     </section>
 
     <!-- Contact Sectie -->
