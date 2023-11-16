@@ -61,7 +61,7 @@
         function volgendeAfhaaldagNadien() { return volgendeAfhaaldag() + 7; } // de week nadien
         const maanden = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
         const dagen = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
-        function datumTekst( d) { return `${dagen[d.getDay()]} ${d.getDate()} ${maanden[d.getMonth()]}`; }
+        function datumTekst( d) { console.log(d); return `${dagen[d.getDay()]} ${d.getDate()} ${maanden[d.getMonth()]}`; }
     </script>
     <section id="bestellen" class="mt-4">
         <h2>Bestel Uw Kaneelkoeken</h2>
