@@ -1,0 +1,53 @@
+/* Meer Witruimte */
+body, .container {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Typografie */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Kleurenpalet */
+body {
+    color: #333; /* Donkergrijze tekst */
+    background-color: #f8f8f8; /* Lichtgrijze achtergrond */
+}
+
+/* Knoppen en Links */
+.btn, a {
+    background-color: transparent;
+    border: 1px solid #D2691E; /* Kaneelkleur */
+    color: #D2691E;
+    padding: 5px 10px;
+}
+
+.btn:hover, a:hover {
+    background-color: #D2691E;
+    color: white;
+}
+
+/* Afbeeldingen */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigatiebalk */
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+/* Formulieren */
+input, select, button {
+    margin: 10px 0;
+}
+
+/* Sectie Titels */
+h2, h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
