@@ -57,16 +57,15 @@
     <!-- Bestellen Sectie -->
     <script>
         function jeKanBestellen() { return [1, 2, 3, 4].includes((new Date()).getDay()); }
-        function volgendeAfhaaldag() { return new Date((new Date()).getTime() + 1000*24*60*60*(6 - (new Date()).getDay() + 7)); } // 6 is voor zaterdag
-        function volgendeAfhaaldagNadien() { return volgendeAfhaaldag() + 7; } // de week nadien
+        const volgendeAfhaaldag = new Date((new Date()).getTime() + 1000*24*60*60*(6 - (new Date()).getDay() + 7)); 
         const maanden = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
         const dagen = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
-        function datumTekst( d) { console.log(d); return `${dagen[d.getDay()]} ${d.getDate()} ${maanden[d.getMonth()]}`; }
+        const volgendeAfhaaldagInTekst =  `${dagen[volgendeAfhaaldag.getDay()]} ${volgendeAfhaaldag.getDate()} ${maanden[volgendeAfhaaldag.getMonth()]}`; 
     </script>
     <section id="bestellen" class="mt-4">
         <h2>Bestel Uw Kaneelkoeken</h2>
         <h3>Vers en klaar voor afhaling</h3>
-        <p>Plaats hier uw bestelling voor onze overheerlijke kaneelkoeken. Bestellingen zijn mogelijk van maandag tot donderdag voor afhaling op zaterdag <script> document.write(datumTekst(volgendeAfhaaldag())); </script> </p>
+        <p>Plaats hier uw bestelling voor onze overheerlijke kaneelkoeken. Bestellingen zijn mogelijk van maandag tot donderdag voor afhaling op <script> document.write(volgendeAfhaaldagInTekst()); </script> </p>
         <script>
         <form action="mailto:koen.vanderauwera@gmail.com" method="post" enctype="text/plain" class="row g-3">
             <div class="col-md-12">
