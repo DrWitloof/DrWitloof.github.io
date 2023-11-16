@@ -17,7 +17,7 @@ body {
 }
 
 /* Knoppen en Links */
-.btn, a {
+.btn {
     background-color: transparent;
     border: 1px solid #D2691E; /* Kaneelkleur */
     color: #D2691E;
