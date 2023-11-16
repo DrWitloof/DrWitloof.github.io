@@ -78,7 +78,7 @@
                 <input type="tel" class="form-control" id="telefoon" name="telefoon" placeholder="Uw Telefoonnummer" aria-label="Uw Telefoonnummer" required>
             </div>
             <div class="col-md-6">
-                <select id="aantal" name="aantal" class="form-control" aria-label="Aantal Kaneelkoeken" required>
+                <select id="aantal" name="aantal" class="form-control" aria-label="Aantal Kaneelkoeken" onchange="berekenTotaal()" required>
                     <option value="0">Aantal Kaneelkoeken</option>
                     <script> // Show the options 1 => 10
                         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].forEach(option => document.write(`<option value="${option}">${option}</option>`));
@@ -94,7 +94,7 @@
                 </select>
             </div>
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary form-control" id="bestelKnop">Bestel Nu</button>
+                <button type="submit" class="btn btn-primary form-control" id="bestelKnop" >Bestel Nu</button>
                 
                 <script>
                     // Code om de knop dynamisch in- of uit te schakelen
