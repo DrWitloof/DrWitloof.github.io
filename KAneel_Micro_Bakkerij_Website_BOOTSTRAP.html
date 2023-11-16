@@ -57,9 +57,9 @@
     <!-- Bestellen Sectie -->
     <script>
         function jeKanBestellen() { return [1, 2, 3, 4].includes((new Date()).getDay()); }
-        const volgendeAfhaaldag = new Date((new Date()).getTime() + 1000*24*60*60*(6 - (new Date()).getDay() + 7)); 
+        const volgendeAfhaaldag = new Date((new Date()).getTime() + 1000*24*60*60*(6 - (new Date()).getDay())); 
         const maanden = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"];
-        const dagen = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"];
+        const dagen = ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"];
         const volgendeAfhaaldagInTekst =  `${dagen[volgendeAfhaaldag.getDay()]} ${volgendeAfhaaldag.getDate()} ${maanden[volgendeAfhaaldag.getMonth()]}`;  
         console.log(volgendeAfhaaldagInTekst);
     </script>
